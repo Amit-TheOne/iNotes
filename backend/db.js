@@ -1,10 +1,16 @@
 const mongoose = require("mongoose");
-const mongoURI = "mongodb://localhost:27017/inotes"
 
 const connectToMongo = () => {
-    mongoose.connect(mongoURI, () => {
+    mongoose.connect(process.env.MONGODB_URI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    })
+    .then(() => {
         console.log("Connected to Mongo Successfully");
     })
+    .catch((err) => {
+        console.error("Failed to connect to Mongo", err);
+    });
 }
 
 module.exports = connectToMongo;
