@@ -10,7 +10,7 @@ const Signup = (props) => {
         e.preventDefault();
         const { name, email, password } = credentials;
 
-        const response = await fetch("http://localhost:5000/api/auth/createuser", {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_API_URL}/auth/createuser`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -19,7 +19,7 @@ const Signup = (props) => {
         });
 
         const json = await response.json();
-        console.log(json);
+        // console.log(json);
 
         if (json.success) {
             // Save the auth token and redirect 
@@ -42,7 +42,7 @@ const Signup = (props) => {
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label htmlFor="name" className="form-label">Name</label>
-                    <input type="text" className="form-control" onChange={onChange} id="name" name="name" aria-describedby="emailHelp" />
+                    <input type="text" className="form-control" onChange={onChange} id="name" name="name" aria-describedby="nameHelp" />
                 </div>
 
                 <div className="mb-3">

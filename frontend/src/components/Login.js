@@ -8,7 +8,7 @@ const Login = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("http://localhost:5000/api/auth/login", {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_API_URL}/auth/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -17,7 +17,7 @@ const Login = (props) => {
         });
 
         const json = await response.json();
-        console.log(json);
+        // console.log(json);
         if (json.success) {
             // Save the auth token and redirect 
             localStorage.setItem("token", json.authtoken);
