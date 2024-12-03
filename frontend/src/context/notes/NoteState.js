@@ -50,7 +50,7 @@ const NoteState = (props) => {
         "auth-token": localStorage.getItem("token"),
       },
     });
-    const json = response.json();
+    // const json = response.json();
     // console.log(json);
 
     // Delete in client
