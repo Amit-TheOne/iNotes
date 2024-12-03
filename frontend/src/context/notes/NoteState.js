@@ -43,7 +43,7 @@ const NoteState = (props) => {
   // Delete a Note
   const deleteNote = async (id) => {
     // API call
-    const response = await fetch(`${process.env.REACT_APP_BACKEND_API_URL}/notes/deletenote/${id}`, {
+    await fetch(`${process.env.REACT_APP_BACKEND_API_URL}/notes/deletenote/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
