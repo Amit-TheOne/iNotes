@@ -17,6 +17,7 @@
     "eject": "react-scripts eject",
     "both": "concurrently \"npm run start\" \"cd ../backend && npm run serve\""
   },
+  "homepage": "/login",
   "eslintConfig": {
     "extends": [
       "react-app"
