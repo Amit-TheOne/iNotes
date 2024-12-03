@@ -4,8 +4,8 @@
   "description": "iNotes- Notes on the cloud",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "nodemon index.js"
+    "start": "nodemon index.js",
+    "dev": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
