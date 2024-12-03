@@ -7,7 +7,7 @@ export const UpdateNote = ({ note, showAlert }) => {
   const refClose = useRef(null)
 
   const handleUpdate = () => {
-    console.log("Updating the note..!", note)
+    // console.log("Updating the note..!", note)
     editNote(updateNote.id, updateNote.etitle, updateNote.edescription, updateNote.etag)
     refClose.current.click();
     showAlert("Updated Successfully", "success")

@@ -37,7 +37,7 @@ const NoteState = (props) => {
     // Add in Client
     const note = await response.json();
     setNotes(notes.concat(note))
-    console.log("Adding a new note")
+    // console.log("Adding a new note")
   }
 
   // Delete a Note
@@ -51,10 +51,10 @@ const NoteState = (props) => {
       },
     });
     const json = response.json();
-    console.log(json);
+    // console.log(json);
 
     // Delete in client
-    console.log("Deleting a note with id " + id);
+    // console.log("Deleting a note with id " + id);
     const newNotes = notes.filter((note) => { return note._id !== id });
     setNotes(newNotes);
   }
